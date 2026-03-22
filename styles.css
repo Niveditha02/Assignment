@@ -1982,6 +1982,28 @@ img {
         display: flex;
     }
 
+    .sticky-scroll-header {
+        display: none !important;
+    }
+
+    .hero,
+    .tech-specs,
+    .features,
+    .manufacturing,
+    .portfolio-v2,
+    .testimonials-section,
+    .faq-section,
+    .applications-section,
+    .resources-section,
+    .portfolio,
+    .contact {
+        padding: 64px 0;
+    }
+
+    .hero-grid {
+        gap: 32px;
+    }
+
     .section-title {
         font-size: 32px;
     }
@@ -1995,7 +2017,192 @@ img {
     }
 
     .main-image {
-        height: 320px;
+        height: clamp(220px, 52vw, 320px);
+    }
+
+    .thumbnails {
+        overflow-x: auto;
+        padding-bottom: 4px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .thumb {
+        width: 84px;
+        height: 64px;
+    }
+
+    .hero-features li {
+        justify-content: flex-start;
+        text-align: left;
+    }
+
+    .price-card,
+    .price-action-wrapper,
+    .action-buttons,
+    .catalogue-form,
+    .btn-talk-expert {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .price-card {
+        padding: 16px;
+    }
+
+    .price-value {
+        font-size: 20px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .action-buttons .btn,
+    .action-buttons .btn-quote,
+    .action-buttons .btn-outline,
+    .btn-talk-expert {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .trusted-brands-hero {
+        margin-top: 48px;
+        padding-top: 24px;
+    }
+
+    .brands-row {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .brand-logo {
+        height: 20px;
+    }
+
+    .specs-title,
+    .features-header .section-title.text-left,
+    .applications-text .section-title.text-left {
+        font-size: 30px;
+    }
+
+    .specs-subtitle,
+    .features-subtitle,
+    .manufacturing-subtitle,
+    .portfolio-subtitle,
+    .testimonials-subtitle,
+    .applications-subtitle,
+    .resources-subtitle {
+        font-size: 15px;
+    }
+
+    .specs-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .specs-table {
+        min-width: 620px;
+    }
+
+    .feature-grid,
+    .portfolio-v2-grid,
+    .testimonials-grid,
+    .portfolio-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card,
+    .portfolio-v2-card,
+    .testimonial-card {
+        padding: 24px;
+    }
+
+    .manufacturing-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .process-tabs-wrapper {
+        padding: 0;
+        overflow-x: auto;
+    }
+
+    .process-line {
+        display: none;
+    }
+
+    .process-tabs {
+        justify-content: flex-start;
+        gap: 10px;
+        width: max-content;
+        padding-bottom: 4px;
+    }
+
+    .process-tab {
+        white-space: nowrap;
+        padding: 9px 18px;
+        font-size: 13px;
+    }
+
+    .process-content {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .process-content-container {
+        padding: 0;
+    }
+
+    .process-text h3 {
+        font-size: 24px;
+    }
+
+    .process-image-wrapper {
+        height: 260px;
+    }
+
+    .applications-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .applications-nav {
+        width: 100%;
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
+
+    .app-card {
+        min-width: min(82vw, 320px);
+        height: 420px;
+    }
+
+    .app-card-content {
+        padding: 22px;
+    }
+
+    .app-card-content h3 {
+        font-size: 20px;
+    }
+
+    .resource-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 18px 20px;
+    }
+
+    .catalogue-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 24px;
+    }
+
+    .catalogue-form {
+        min-width: 100%;
     }
 
     .expert-cta-inner {
@@ -2004,15 +2211,54 @@ img {
         padding: 32px 24px;
     }
 
+    .contact-form {
+        padding: 28px;
+    }
+
+    .footer-main {
+        padding: 44px 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
     .footer-brand-inner {
         flex-direction: column;
         text-align: center;
         gap: 16px;
+        padding: 18px 20px;
     }
 
     .footer-brand-tagline {
         text-align: center;
         font-size: 18px;
+    }
+
+    .footer-bottom-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq-title {
+        font-size: 30px;
+        margin-bottom: 32px;
+    }
+
+    .faq-question {
+        padding: 18px;
+        gap: 14px;
+    }
+
+    .faq-question h3 {
+        font-size: 15px;
+        line-height: 1.45;
+    }
+
+    .mobile-nav-link {
+        font-size: 20px;
     }
 
     .header {
@@ -2040,8 +2286,49 @@ img {
         --container-padding: 16px;
     }
 
+    .hero,
+    .tech-specs,
+    .features,
+    .manufacturing,
+    .portfolio-v2,
+    .testimonials-section,
+    .faq-section,
+    .applications-section,
+    .resources-section,
+    .portfolio,
+    .contact {
+        padding: 48px 0;
+    }
+
     .hero-content h1 {
         font-size: 28px;
+    }
+
+    .hero-certs {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .cert-tag {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+
+    .hero-features {
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .hero-features li {
+        font-size: 14px;
+    }
+
+    .price-badge {
+        font-size: 12px;
+    }
+
+    .price-value {
+        font-size: 18px;
     }
 
     .action-buttons, .sticky-actions {
@@ -2056,6 +2343,54 @@ img {
 
     .section-title {
         font-size: 28px;
+    }
+
+    .specs-title,
+    .features-header .section-title.text-left,
+    .applications-text .section-title.text-left,
+    .faq-title {
+        font-size: 26px;
+    }
+
+    .specs-table th,
+    .specs-table td {
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    .manufacturing-card,
+    .feature-card,
+    .portfolio-v2-card,
+    .testimonial-card,
+    .contact-form {
+        padding: 18px;
+    }
+
+    .process-text h3 {
+        font-size: 21px;
+        margin-bottom: 16px;
+    }
+
+    .process-text p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .process-image-wrapper {
+        height: 220px;
+    }
+
+    .img-nav {
+        width: 36px;
+        height: 36px;
+    }
+
+    .prev-img {
+        left: 10px;
+    }
+
+    .next-img {
+        right: 10px;
     }
 
     .footer-grid {
@@ -2073,9 +2408,64 @@ img {
         gap: 16px;
     }
 
+    .catalogue-banner {
+        margin-top: 40px;
+        padding: 18px;
+        gap: 16px;
+    }
+
+    .catalogue-text h2 {
+        font-size: 20px;
+    }
+
+    .catalogue-text p {
+        font-size: 14px;
+    }
+
+    .applications-nav {
+        gap: 10px;
+    }
+
+    .nav-btn {
+        width: 44px;
+        height: 44px;
+    }
+
     .app-card {
-        min-width: 280px;
-        height: 360px;
+        min-width: 85vw;
+        height: 340px;
+        border-radius: 18px;
+    }
+
+    .app-card-content {
+        padding: 16px;
+    }
+
+    .app-card-content h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    .app-card-content p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .resource-row {
+        padding: 14px 16px;
+    }
+
+    .resource-name,
+    .resource-download {
+        font-size: 13px;
+    }
+
+    .mobile-nav ul {
+        gap: 24px;
+    }
+
+    .mobile-nav-link {
+        font-size: 18px;
     }
 
     .catalogue-form {
